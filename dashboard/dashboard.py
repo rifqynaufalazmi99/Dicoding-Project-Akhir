@@ -3,11 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df_day = pd.read_csv("day.csv")
+df_day = pd.read_csv("dashboard/day.csv")
 df_day_2 = df_day.rename(columns={'weathersit':'weather', 'yr':'year', 'mnth':'month', 'hum':'humidity', 'cnt':'count'})
 df_day_2 = df_day_2.drop(columns = ['instant' , 'dteday'])
 
-df_hour = pd.read_csv("hour.csv")
+df_hour = pd.read_csv("dashboard/hour.csv")
 df_hour_2 = df_hour.rename(columns={'weathersit':'weather', 'yr':'year', 'mnth':'month', 'hr':'hour','hum':'humidity', 'cnt':'count'})
 df_hour_2 = df_hour_2.drop(columns = ['instant' , 'dteday'])
 
